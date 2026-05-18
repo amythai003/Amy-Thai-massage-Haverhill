@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Amy Thai massage Haverhill</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #d4a843;
+      --gold-light: #edd98a;
+      --gold-dark: #b08828;
+      --dark: #0f0a1a;
+      --dark-mid: #1e1035;
+      --cream: #f5f0ff;
+      --text-muted: #7a6a9a;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: rgba(15,10,26,0.93);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(201,169,110,0.25);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── HERO ── */
+    #index {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(160deg, #3b0764 0%, #5b21b6 40%, #2e1065 70%, #1e1035 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 7rem 4rem 0;
+    }
+
+    /* smooth fade into the contact section below */
+    #index::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 120px;
+      background: linear-gradient(to bottom, transparent, #0f0a1a);
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    /* decorative blobs */
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.25;
+      pointer-events: none;
+    }
+    .hero-blob-1 {
+      width: 500px; height: 500px;
+      background: #7c3aed;
+      top: -100px; left: -150px;
+      animation: blobDrift 10s ease-in-out infinite alternate;
+    }
+    .hero-blob-2 {
+      width: 380px; height: 380px;
+      background: var(--gold);
+      bottom: 60px; right: -80px;
+      opacity: 0.15;
+      animation: blobDrift 12s ease-in-out infinite alternate-reverse;
+    }
+    .hero-blob-3 {
+      width: 260px; height: 260px;
+      background: #a855f7;
+      top: 50%; right: 38%;
+      opacity: 0.18;
+      animation: blobDrift 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes blobDrift {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(30px, 20px) scale(1.08); }
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      padding-bottom: 6rem;
+    }
+
+    .hero-content { }
+
+    .hero-badge {
+      display: inline-block;
+      border: 1px solid rgba(212,168,67,0.6);
+      color: var(--gold-light);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.45rem 1.4rem;
+      border-radius: 2rem;
+      margin-bottom: 2rem;
+      animation: fadeUp 0.8s ease both;
+      background: rgba(212,168,67,0.08);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #c084fc;
+      margin-bottom: 1rem;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 5.5vw, 4.8rem);
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.9s ease 0.1s both;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 460px;
+      margin-bottom: 2.5rem;
+      line-height: 1.85;
+      font-weight: 300;
+      animation: fadeUp 1s ease 0.2s both;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeUp 1s ease 0.3s both;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: #1a0a2e;
+      padding: 0.9rem 2.4rem;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2rem;
+      transition: transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 4px 24px rgba(212,168,67,0.35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(212,168,67,0.5); }
+
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.8);
+      padding: 0.9rem 2.4rem;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2rem;
+      transition: border-color 0.3s, color 0.3s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* hero image side */
+    .hero-visual {
+      position: relative;
+      animation: fadeUp 1s ease 0.2s both;
+    }
+
+    .hero-img-frame {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(212,168,67,0.25);
+      box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(124,58,237,0.3);
+    }
+
+    .hero-img-frame img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.9) saturate(1.1);
+    }
+
+    /* purple tint overlay on image */
+    .hero-img-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, rgba(91,33,182,0.25), transparent 60%);
+      pointer-events: none;
+    }
+
+    /* floating gold pill badge on image */
+    .hero-img-tag {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      background: rgba(15,10,26,0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212,168,67,0.35);
+      border-radius: 50px;
+      padding: 0.6rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      z-index: 2;
+    }
+    .hero-img-tag span { font-size: 0.75rem; color: var(--gold-light); letter-spacing: 0.05em; }
+    .hero-img-tag .dot { width: 8px; height: 8px; border-radius: 50%; background: #a855f7; animation: dotPulse 2s ease-in-out infinite; }
+    @keyframes dotPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(168,85,247,0.5); }
+      50% { box-shadow: 0 0 0 6px rgba(168,85,247,0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 900px) {
+      #index { padding: 7rem 2rem 0; }
+      .hero-inner { grid-template-columns: 1fr; padding-bottom: 4rem; }
+      .hero-visual { order: -1; }
+      .hero-img-frame img { height: 300px; }
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 0 auto 3rem;
+      max-width: 180px;
+    }
+    .divider-line { flex: 1; height: 1px; background: var(--gold); opacity: 0.4; }
+    .divider-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+    /* ── SECTIONS ── */
+    section { padding: 6rem 2rem; }
+
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      text-align: center;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+
+    .section-desc {
+      text-align: center;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto 3.5rem;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: linear-gradient(to bottom, #0f0a1a 0%, #130d22 100%); }
+    #contact .section-title { color: var(--white); }
+    #contact .section-desc { color: var(--gold-light); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-info { color: var(--gold-light); }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .contact-icon {
+      width: 40px; height: 40px;
+      border: 1px solid rgba(201,169,110,0.35);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+
+    .contact-detail-text { font-size: 0.95rem; line-height: 1.6; color: var(--gold-light); }
+    .contact-detail-text strong { display: block; color: var(--gold); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.25rem; }
+
+    .contact-detail-text a { color: var(--gold-light); text-decoration: none; transition: color 0.3s; }
+    .contact-detail-text a:hover { color: var(--gold); }
+
+    .photo-mosaic {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 0.6rem;
+    }
+
+    .photo-mosaic .photo { border-radius: 8px; overflow: hidden; background: var(--dark-mid); }
+    .photo-mosaic .photo img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.85; transition: opacity 0.3s; }
+    .photo-mosaic .photo img:hover { opacity: 1; }
+    .photo-mosaic .photo:first-child { grid-column: 1 / -1; height: 220px; }
+    .photo-mosaic .photo:not(:first-child) { height: 150px; }
+
+    /* ── SERVICES ── */
+    #service { background: var(--cream); }
+
+    .service-intro {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 4rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid rgba(201,169,110,0.2);
+      border-radius: 12px;
+      padding: 2rem 2rem 1.6rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(160,120,64,0.12); }
+    .service-card:hover::before { opacity: 1; }
+
+    .service-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 0.6rem;
+    }
+
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-prices {
+      display: flex;
+      gap: 1rem;
+      border-top: 1px solid rgba(201,169,110,0.2);
+      padding-top: 1.2rem;
+    }
+
+    .price-item { flex: 1; text-align: center; }
+    .price-duration { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.3rem; }
+    .price-amount { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--gold-dark); }
+
+    /* ── FAQ ── */
+    #ask { background: var(--dark-mid); }
+    #ask .section-title { color: var(--white); }
+    #ask .section-desc { color: var(--gold-light); }
+
+    .faq-list { max-width: 740px; margin: 0 auto; }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(201,169,110,0.2);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.4rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--gold-light);
+      text-align: left;
+      gap: 1rem;
+      transition: color 0.3s;
+    }
+
+    .faq-question:hover { color: var(--gold); }
+
+    .faq-icon {
+      width: 28px; height: 28px;
+      border: 1px solid rgba(201,169,110,0.4);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      color: var(--gold);
+      font-size: 1.1rem;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--gold); color: var(--dark); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      font-size: 0.9rem;
+      color: rgba(232,213,176,0.75);
+      line-height: 1.8;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+      padding-bottom: 1.4rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(201,169,110,0.15);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+    }
+
+    footer span { color: var(--gold); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { gap: 1.2rem; }
+      .nav-links a { font-size: 0.7rem; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .photo-mosaic { order: -1; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#index">Amy Thai massage Haverhill</a>
+    <ul class="nav-links">
+      <li><a href="#index">Home</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#service">Services</a></li>
+      <li><a href="#ask">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="index">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Amy Thai massage · Haverhill</p>
+        <div class="hero-badge">✨ Under New Management · Since 1 Apr 2026 ✨</div>
+        <h1 class="hero-title">Tired of <em>Ordinary?</em></h1>
+        <p class="hero-sub">We challenge you to break free from stress. Let our experts prove why we are the gold standard of relaxation. Are you ready?</p>
+        <div class="hero-cta-row">
+          <a href="#contact" class="btn-primary">Book a Session</a>
+          <a href="#service" class="btn-outline">View Services</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-frame">
+          <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&auto=format&fit=crop&q=80" alt="Thai massage therapy" />
+          <div class="hero-img-tag">
+            <div class="dot"></div>
+            <span>Traditional Thai · Aromatherapy · Deep Tissue</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <p class="section-label">Find Us</p>
+      <h2 class="section-title">Contact</h2>
+      <p class="section-desc">Experience the serene atmosphere and premium care</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-detail">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail-text">
+              <strong>Address</strong>
+              1st floor 25 high street Haverhill Cambridge CB9 8AD
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">📞</div>
+            <div class="contact-detail-text">
+              <strong>Phone</strong>
+              <a href="tel:01440766980">01440766980</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">💬</div>
+            <div class="contact-detail-text">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/01440766980" target="_blank">Message us on WhatsApp</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">📘</div>
+            <div class="contact-detail-text">
+              <strong>Facebook</strong>
+              <a href="https://www.facebook.com/profile.php?id=61587923230297" target="_blank">Visit our Facebook page</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-mosaic">
+          <div class="photo"><img src="img_1.jpg" alt="Amy Thai massage Haverhill interior" /></div>
+          <div class="photo"><img src="img_3.jpg" alt="Amy Thai massage Haverhill space" /></div>
+          <div class="photo"><img src="img_4.jpg" alt="Amy Thai massage Haverhill ambiance" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="service">
+    <div class="section-inner">
+      <p class="section-label">What We Offer</p>
+      <h2 class="section-title">Services</h2>
+      <p class="service-intro">"At Amy Thai massage Haverhill, we believe that a massage is not just a luxury — it is a vital journey toward restoring your body's natural harmony."</p>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <h3 class="service-name">Traditional Thai</h3>
+          <p class="service-desc">A classic full-body treatment to improve flexibility and energy flow.</p>
+          <div class="service-prices">
+            <div class="price-item">
+              <div class="price-duration">30 mins</div>
+              <div class="price-amount">£30</div>
+            </div>
+            <div class="price-item">
+              <div class="price-duration">60 mins</div>
+              <div class="price-amount">£50</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-name">Aromatherapy</h3>
+          <p class="service-desc">Soothing massage with premium essential oils for ultimate relaxation.</p>
+          <div class="service-prices">
+            <div class="price-item">
+              <div class="price-duration">30 mins</div>
+              <div class="price-amount">£30</div>
+            </div>
+            <div class="price-item">
+              <div class="price-duration">60 mins</div>
+              <div class="price-amount">£50</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-name">Thai Oil Massage</h3>
+          <p class="service-desc">Combining Thai techniques with smooth oil for a rhythmic, healing touch.</p>
+          <div class="service-prices">
+            <div class="price-item">
+              <div class="price-duration">30 mins</div>
+              <div class="price-amount">£30</div>
+            </div>
+            <div class="price-item">
+              <div class="price-duration">60 mins</div>
+              <div class="price-amount">£50</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-name">Sport Massage</h3>
+          <p class="service-desc">Focused treatment for active lifestyles to recover and prevent injury.</p>
+          <div class="service-prices">
+            <div class="price-item">
+              <div class="price-duration">30 mins</div>
+              <div class="price-amount">£40</div>
+            </div>
+            <div class="price-item">
+              <div class="price-duration">60 mins</div>
+              <div class="price-amount">£65</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-name">Deep Tissue</h3>
+          <p class="service-desc">Releasing deep muscle tension and knots through firm, targeted pressure.</p>
+          <div class="service-prices">
+            <div class="price-item">
+              <div class="price-duration">30 mins</div>
+              <div class="price-amount">£40</div>
+            </div>
+            <div class="price-item">
+              <div class="price-duration">60 mins</div>
+              <div class="price-amount">£65</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="ask">
+    <div class="section-inner">
+      <p class="section-label">Questions</p>
+      <h2 class="section-title">Amy Thai massage Haverhill Asks</h2>
+      <p class="section-desc">Everything you need to know before your visit.</p>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What exactly is Traditional Thai Massage?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">Often called "Passive Yoga," it is an ancient healing system that combines rhythmic acupressure, Indian Ayurvedic principles, and assisted yoga postures. Unlike Western styles, the therapist uses their hands, elbows, knees, and feet to move you into a series of stretches.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            In Aromatherapy Oil Massage, how do I choose the right oil?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">Before we begin, our therapist will let you sample our premium blends. Whether you need Lavender for deep sleep, Eucalyptus for respiratory relief, or Lemongrass for an energy boost, we will find the perfect scent for your mood.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is Sport Massage only for professional athletes?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">No. While it is essential for athletes, it is highly beneficial for anyone with an active lifestyle — including gym-goers, runners, or even people with physically demanding jobs. If you experience muscle tightness from repetitive movement, this is for you.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What makes Deep Tissue different from a regular massage?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">While a relaxation massage focuses on the surface layers of muscle, Deep Tissue uses slow, deliberate strokes and intense pressure to reach the deeper layers of muscle and connective tissue (fascia). It is specifically designed to break down "adhesions" or knots that cause pain and limit movement.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2019 <span>Amy Thai massage Haverhill</span> · All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Scroll-reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-card, .contact-detail, .faq-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
